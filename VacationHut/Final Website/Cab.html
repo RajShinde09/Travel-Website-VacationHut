@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        select {
+            font-size: 15px;
+            margin-top: 5px;
+
+        }
+
+        .vehicle {
+            font-size: 20px;
+            color: #000000b0;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="book" id="book">
+
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>c</span>
+            <span>a</span>
+            <span>b</span>
+        </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/book-img.svg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <h3>PickUp Place</h3>
+                    <input type="text" placeholder="place name">
+                </div>
+                <div class="inputBox">
+                    <h3>Drop Place</h3>
+                    <input type="text" placeholder="place name">
+                </div>
+                <div class="inputbox">
+                    <h3 class="vehicle">Select Vehicle</h3>
+                    <select name="select" id="">
+                        <option value="taxi">Taxi</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Minibus">Mini Bus</option>
+                        <option value="Bus">Bus</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <h3>how many</h3>
+                    <input type="number" placeholder="number of guests">
+                </div>
+                <div class="inputBox">
+                    <h3>PickUp Time</h3>
+                    <input type="time">
+                </div>
+                <div class="inputBox">
+                    <h3>PickUp Date</h3>
+                    <input type="date">
+                </div>
+                <a href="gateway.html">
+                <input type="button" class="btn" value="book now"></a>
+            </form>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

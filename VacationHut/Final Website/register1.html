@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-image: url('login bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .login {
+            background-color: rgba(238, 238, 212, 0.6);
+            border: 2px solid rgb(31, 29, 29);
+            border-radius: 1cm;
+            height: 341px;
+            width: 300px;
+            text-align: center;
+            margin-top: 124px;
+            margin-left: 620px;
+            padding-top: 54px;
+        }
+
+        h1 {
+            color: black;
+            font-weight: bolder;
+            font-size: 2em;
+
+        }
+
+        .submit {
+
+            border: 2px solid black;
+            margin-top: 8px;
+            margin-left: 12px;
+            font-size: 25px;
+            border-radius: 2cm;
+            width: 110px;
+            text-align: center;
+            background-color: #ffffff63;
+
+        }
+
+        form label {
+            font-size: 18px;
+            font-weight: 1000;
+        }
+
+        a {
+            color: antiquewhite;
+        }
+
+        .register {
+            margin-top: -318px;
+            margin-left: 1038px;
+            font-size: 24px;
+            font-weight: 600;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function connection() {
+            var mysql = require('mysql');
+
+            var con = mysql.createConnection({
+                host: "localhost",
+                user: "root",
+                password: "",
+                database: "test1"
+            });
+
+            con.connect(function (err) {
+                if (err) throw err;
+                console.log("Connected!");
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="login">
+        <h1>VacationHut</h1>
+        <img src="" alt="" class="logo">
+
+        <Form method="post" action="https://formspree.io/f/mwkydgwv"
+        method="POST">
+            <label for="user"><strong>Name:</strong></label>
+            <input type="text"  name = "name" id="user" placeholder="Enter your name" required><br>
+            <br>
+            <label for="email"><strong>Email:</strong></label>
+            <input type="email" name = "email" id="email" placeholder="Enter your mail" required><br>
+            <br>
+            <label for="dob"><strong>DOB:</strong></label>
+            <input type="date" id="dob" placeholder="Enter your birth date" required><br>
+            <br>
+            <label for="password"><strong>Password:</strong></label>
+            <input type="text" name="password" id="password" placeholder="Enter your password" required><br>
+            <br>
+            <a href="login1.html">
+                <input type="button" value="Register" onclick="connection()" class="btn"></a><br>
+
+        </Form>
+
+    </section>
+    <section class="register">
+        <p>Already a user!!!</p>
+        <a href="login1.html">Login Here</a>
+    </section>
+</body>
+
+</html>
